@@ -1,0 +1,22 @@
+fos_elastica:
+    clients:
+        default: { host: %elastic_host%, port: %elastic_port% }
+    indexes:
+        theodo_blog:
+            client: default
+            types:
+                article:
+                    mappings:
+                        id:
+                            type: integer
+                        publicationDate:
+                            type: date
+                        title: ~
+                        content: ~
+                    persistence:
+                        driver: orm
+                        model: AppBundle\Entity\Article
+                        finder: ~
+                        provider: ~
+                        listener: ~
+                        repository: AppBundle\SearchRepository\ArticleRepository

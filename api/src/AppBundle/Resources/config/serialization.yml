@@ -1,0 +1,44 @@
+AppBundle\Entity\Article:
+    attributes:
+        id:
+            groups: ['article', 'article_summary', 'author']
+        slug:
+            groups: ['article', 'article_summary', 'author']
+        title:
+            groups: ['article', 'article_summary', 'author']
+        publicationDate:
+            groups: ['article', 'article_summary', 'author']
+        readingTime:
+            groups: ['article', 'article_summary', 'author']
+        picture:
+            groups: ['article', 'article_summary', 'author']
+        summary:
+            groups: ['article', 'article_summary', 'author']
+        content:
+            groups: ['article']
+        author:
+            groups: ['article', 'article_summary']
+        tags:
+            groups: ['article', 'article_summary', 'author']
+
+AppBundle\Entity\Author:
+    attributes:
+        id:
+            groups: ['author', 'article', 'article_summary']
+        slug:
+            groups: ['author', 'article', 'article_summary']
+        picture:
+            groups: ['author', 'article', 'article_summary']
+        name:
+            groups: ['author', 'article', 'article_summary']
+        articles:
+            groups: ['author']
+
+AppBundle\Entity\Tag:
+    attributes:
+        id:
+            groups: ['author', 'article', 'article_summary']
+        slug:
+            groups: ['author', 'article', 'article_summary']
+        name:
+            groups: ['author', 'article', 'article_summary']
