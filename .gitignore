@@ -1,14 +1,17 @@
 # dependencies
 node_modules
 
+# build
+dist/
+
+# tests
+test/unit/coverage
+
 # logs
+npm-debug.log*
 npm-debug.log
-
-# Nuxt build
-.nuxt
-
-# Nuxt generate
-dist
+yarn-debug.log*
+yarn-error.log*
 
 # Symfony API
 /api/app/config/parameters.yml
