@@ -4,8 +4,8 @@
 parameters:
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     theodo-blog
-    database_user:     root
+    database_name:     circle_test
+    database_user:     ubuntu
     database_password: ~
     elastic_host:      localhost
     elastic_port:      9200

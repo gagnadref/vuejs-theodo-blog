@@ -1,0 +1,27 @@
+machine:
+  php:
+    version: 7.0.4
+
+services:
+  - mysql
+
+checkout:
+  post:
+    - cp api/app/config/parameters.yml.circle api/app/config/parameters.yml
+
+dependencies:
+  pre:
+    - cd api && composer install --no-interaction
+
+database:
+  override:
+    - php api/bin/console doctrine:schema:update --force
+    - mysql -u ubuntu circle_test < api/fixtures.sql
+
+test:
+  pre:
+    - php api/bin/console server:start
+    - npm start
+  override:
+    - npm run lint
+    - npm test
