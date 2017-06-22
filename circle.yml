@@ -26,8 +26,11 @@ database:
 
 test:
   pre:
-    - php api/bin/console server:start
-    - yarn start
+    - php api/bin/console server:start:
+          background: true
+    - yarn start:
+          background: true
+    - sleep 20
   override:
     - yarn run lint
     - yarn test
