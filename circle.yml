@@ -9,9 +9,23 @@ checkout:
   post:
     - cp api/app/config/parameters.yml.circle api/app/config/parameters.yml
 
+before_install:
+
 dependencies:
-  pre:
+  cache_directories:
+    - travis_phantomjs
+  override:
+    # Upgrade PhantomJS to v2.1.1.
+    - "export PHANTOMJS_VERSION=2.1.1"
+    - "export PATH=$PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin:$PATH"
+    - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then rm -rf $PWD/travis_phantomjs; mkdir -p $PWD/travis_phantomjs; fi"
+    - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then wget https://github.com/Medium/phantomjs/releases/download/v$PHANTOMJS_VERSION/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -O $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2; fi"
+    - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then tar -xvf $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -C $PWD/travis_phantomjs; fi"
+    - "phantomjs --version"
+    # Composer
     - cd api && composer install --no-interaction
+    # npm
+    - npm install
 
 database:
   override:
