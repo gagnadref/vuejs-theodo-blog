@@ -6,9 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
+    "start": "http-server dist",
     "build": "node build/build.js",
-    "karma": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "mocha",
     "lint": "eslint --ext .js,.vue src"
   },
