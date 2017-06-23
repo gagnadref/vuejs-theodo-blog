@@ -7,6 +7,7 @@
           :id="author.id"
           :slug="author.slug"
           :picture="author.picture"
+          :name="author.name"
           :key="author.id"
         />
       </div>

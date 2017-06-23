@@ -94,21 +94,6 @@ describe('Lighthouse PWA Testing', function () {
     done()
   })
 
-  it('should work on Edge, Firefox and Safari', (done) => {
-    assert.isTrue(lighthouseAudits['pwa-cross-browser'].rawValue)
-    done()
-  })
-
-  it('should have snappy transitions', (done) => {
-    assert.isTrue(lighthouseAudits['pwa-page-transitions'].rawValue)
-    done()
-  })
-
-  it('should use individual URLs for each page', (done) => {
-    assert.isTrue(lighthouseAudits['pwa-each-page-has-url'].rawValue)
-    done()
-  })
-
   it('should use unique access keys', (done) => {
     assert.isTrue(lighthouseAudits['accesskeys'].rawValue)
     done()
