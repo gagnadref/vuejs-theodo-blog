@@ -1,0 +1,55 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Theodo - Node, Symfony, Php, AngularJs, React, Ansible, Devops</title><link rel=icon type=image/png sizes=64x64 href=/static/img/icons/favicon.ico><!--[if IE]><link rel="shortcut icon" href="/static/img/icons/favicon.ico"><![endif]--><link rel=manifest href=/static/manifest.json><meta name=theme-color content=#69be9f><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=apple-mobile-web-app-title content=vuejs-theodo-blog><link rel=apple-touch-icon href=/static/img/icons/apple-touch-icon-152x152.png><meta name=msapplication-TileImage content=/static/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000><link rel=stylesheet id=open-sans-css href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.3.1" type=text/css media=all><link rel=stylesheet id=dashicons-css href="http://www.theodo.fr/blog/wp-includes/css/dashicons.min.css?ver=4.3.1" type=text/css media=all><link rel=stylesheet id=admin-bar-css href="http://www.theodo.fr/blog/wp-includes/css/admin-bar.min.css?ver=4.3.1" type=text/css media=all><link rel=stylesheet id=mr-frontend-style-css href="http://www.theodo.fr/blog/wp-content/plugins/multi-rating/assets/css/frontend-min.css?ver=4.3.1" type=text/css media=all><link rel=stylesheet id=font-awesome-css href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css?ver=4.3.1" type=text/css media=all><link rel=stylesheet id=share-button-css-css href=http://www.theodo.fr/blog/wp-content/themes/theodo-blog-theme/css/share-button.min.css type=text/css media=all><link rel=stylesheet id=noticia-text-css href="https://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic&#038;subset=latin" type=text/css media=all><link rel=stylesheet id=bootstrap-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/bootstrap.min.css type=text/css media=all><link rel=stylesheet id=fontello-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/fonts/fontello/css/fontello.css type=text/css media=all><link rel=stylesheet id=prettify-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/google-code-prettify/prettify.css type=text/css media=all><link rel=stylesheet id=uniform-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/jquery.uniform/uniform.default.css type=text/css media=all><link rel=stylesheet id=magnific-popup-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/jquery.magnific-popup/magnific-popup.css type=text/css media=all><link rel=stylesheet id=fluidbox-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/jquery.fluidbox/fluidbox.css type=text/css media=all><link rel=stylesheet id=mediaelement-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/mediaelement/mediaelementplayer.min.css type=text/css media=all><link rel=stylesheet id=flexslider-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/jquery.flexslider/flexslider.css type=text/css media=all><link rel=stylesheet id=selection-sharer-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/selection-sharer/selection-sharer.css type=text/css media=all><link rel=stylesheet id=elastislide-css href=http://www.theodo.fr/blog/wp-content/themes/readme/js/responsive-image-gallery/elastislide.css type=text/css media=all><link rel=stylesheet id=main-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/main.css type=text/css media=all><link rel=stylesheet id=768-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/768.css type=text/css media=all><link rel=stylesheet id=992-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/992.css type=text/css media=all><link rel=stylesheet id=1200-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/1200.css type=text/css media=all><link rel=stylesheet id=1400-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/1400.css type=text/css media=all><link rel=stylesheet id=wp-fix-css href=http://www.theodo.fr/blog/wp-content/themes/readme/css/wp-fix.css type=text/css media=all><link rel=stylesheet id=theme-style-css href=http://www.theodo.fr/blog/wp-content/themes/theodo-blog-theme/style.css type=text/css media=all><link rel=stylesheet id=author-avatars-widget-css href="http://www.theodo.fr/blog/wp-content/plugins/author-avatars/css/widget.css?ver=1.8.7" type=text/css media=all><link rel=stylesheet id=author-avatars-shortcode-css href="http://www.theodo.fr/blog/wp-content/plugins/author-avatars/css/shortcode.css?ver=1.8.7" type=text/css media=all><link rel=preload href=/static/js/vendor.0e22bb1a637dec669e65.js as=script><link rel=preload href=/static/js/app.d144b21ccc5760b16ad1.js as=script><link rel=preload href=/static/css/app.d41d8cd98f00b204e9800998ecf8427e.css as=style><link rel=preload href=/static/js/manifest.2ce7227edb9815236ec2.js as=script><link href=/static/css/app.d41d8cd98f00b204e9800998ecf8427e.css rel=stylesheet></head><body><div id=app></div><script>(function() {
+  'use strict';
+
+  // Check to make sure service workers are supported in the current browser,
+  // and that the current page is accessed from a secure origin. Using a
+  // service worker from an insecure origin will trigger JS console errors.
+  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
+      // [::1] is the IPv6 localhost address.
+      window.location.hostname === '[::1]' ||
+      // 127.0.0.1/8 is considered localhost for IPv4.
+      window.location.hostname.match(
+        /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+      )
+    );
+
+  window.addEventListener('load', function() {
+      if ('serviceWorker' in navigator &&
+          (window.location.protocol === 'https:' || isLocalhost)) {
+        navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          // updatefound is fired if service-worker.js changes.
+          registration.onupdatefound = function() {
+            // updatefound is also fired the very first time the SW is installed,
+            // and there's no need to prompt for a reload at that point.
+            // So check here to see if the page is already controlled,
+            // i.e. whether there's an existing service worker.
+            if (navigator.serviceWorker.controller) {
+              // The updatefound event implies that registration.installing is set
+              const installingWorker = registration.installing;
+
+              installingWorker.onstatechange = function() {
+                switch (installingWorker.state) {
+                  case 'installed':
+                    // At this point, the old content will have been purged and the
+                    // fresh content will have been added to the cache.
+                    // It's the perfect time to display a "New content is
+                    // available; please refresh." message in the page's interface.
+                    break;
+
+                  case 'redundant':
+                    throw new Error('The installing ' +
+                                    'service worker became redundant.');
+
+                  default:
+                    // Ignore
+                }
+              };
+            }
+          };
+        }).catch(function(e) {
+          console.error('Error during service worker registration:', e);
+        });
+      }
+  });
+})();</script><script type=text/javascript src=/static/js/manifest.2ce7227edb9815236ec2.js></script><script type=text/javascript src=/static/js/vendor.0e22bb1a637dec669e65.js></script><script type=text/javascript src=/static/js/app.d144b21ccc5760b16ad1.js></script></body></html>
