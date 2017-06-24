@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <blog-header />
+    <blog-header v-once />
     <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
