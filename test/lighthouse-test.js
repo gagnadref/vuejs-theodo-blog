@@ -2,6 +2,21 @@
 const lighthouse = require('lighthouse')
 const chromeLauncher = require('lighthouse/chrome-launcher/chrome-launcher')
 const assert = require('chai').assert
+const axios = require('axios')
+
+const saveAsGist = (LightouseResults) => {
+  return axios.post('https://api.github.com/gists', {
+    description: 'Lighthouse json report',
+    public: true,
+    files: {
+      [`${Date.now()}.lighthouse.report.json`]: {
+        content: JSON.stringify(LightouseResults)
+      }
+    }
+  }).then((res) => {
+    console.log(`FULL LIGHTHOUSE AUDIT: https://googlechrome.github.io/lighthouse/viewer/?gist=${res.data.id}`)
+  })
+}
 
 describe('Lighthouse PWA Testing', function () {
   // Failsafe; could be long depending on what you're trying to test
@@ -18,7 +33,7 @@ describe('Lighthouse PWA Testing', function () {
       lighthouse(url, flags).then(results => {
         chrome.kill().then(() => {
           lighthouseAudits = results.audits
-          done()
+          saveAsGist(results).then(() => done())
         })
       })
     })
