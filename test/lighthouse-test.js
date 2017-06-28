@@ -2,6 +2,7 @@
 const lighthouse = require('lighthouse')
 const chromeLauncher = require('lighthouse/chrome-launcher/chrome-launcher')
 const assert = require('chai').assert
+const mlog = require('mocha-logger')
 const axios = require('axios')
 
 const saveAsGist = (LightouseResults) => {
@@ -14,7 +15,7 @@ const saveAsGist = (LightouseResults) => {
       }
     }
   }).then((res) => {
-    console.log(`FULL LIGHTHOUSE AUDIT: https://googlechrome.github.io/lighthouse/viewer/?gist=${res.data.id}`)
+    mlog.log(`FULL LIGHTHOUSE AUDIT: https://googlechrome.github.io/lighthouse/viewer/?gist=${res.data.id}`)
   })
 }
 
