@@ -56,6 +56,10 @@ export default {
     url: function () {
       return RouteHelper.getArticleRoute(this.publicationDate, this.slug)
     }
+  },
+  mounted: function () {
+    window.myLoadMetrics = {}
+    window.myLoadMetrics.articleListReady = performance.now()
   }
 }
 </script>

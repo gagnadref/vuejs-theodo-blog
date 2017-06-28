@@ -4,6 +4,9 @@ const chromeLauncher = require('lighthouse/chrome-launcher/chrome-launcher')
 const assert = require('chai').assert
 const mlog = require('mocha-logger')
 const axios = require('axios')
+const path = require('path')
+const config = require('./custom-audits/custom-config.js')
+const configPath = path.resolve(__dirname, './custom-audits/custom-config.js')
 
 const saveAsGist = (LightouseResults) => {
   return axios.post('https://api.github.com/gists', {
@@ -26,12 +29,12 @@ describe('Lighthouse PWA Testing', function () {
 
   before('Run Lighthouse base test', (done) => {
     const url = 'http://localhost:8080'
-    const flags = {output: 'json'}
+    const flags = {output: 'json', configPath}
 
     chromeLauncher.launch().then(chrome => {
       flags.port = chrome.port
 
-      lighthouse(url, flags).then(results => {
+      lighthouse(url, flags, config).then(results => {
         chrome.kill().then(() => {
           lighthouseAudits = results.audits
           saveAsGist(results).then(() => done())
