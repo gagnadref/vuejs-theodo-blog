@@ -2,7 +2,7 @@
   <header id="masthead" class="site-header" role="banner">
     <h2 class="site-title">
       <router-link to="/" rel="home">
-        <img alt="Theodo" src="/static/img/logo.png" width="120" height="30">
+        <img alt="Theodo" src="/static/img/logo-big.png" width="120" height="30">
       </router-link>
     </h2>
     <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">

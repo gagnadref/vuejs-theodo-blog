@@ -67,8 +67,8 @@ describe('Lighthouse PWA Testing', function () {
     done()
   })
 
-  it('should have a perceptual speed index < 7,000', (done) => {
-    assert.isBelow(lighthouseAudits['speed-index-metric'].rawValue, 7000)
+  it('should have a perceptual speed index < 6,000', (done) => {
+    assert.isBelow(lighthouseAudits['speed-index-metric'].rawValue, 6000)
     done()
   })
 
